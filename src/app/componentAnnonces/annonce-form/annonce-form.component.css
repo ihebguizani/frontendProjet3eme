@@ -1,0 +1,108 @@
+/* General Form Container Styling */
+.annonce-form-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 0 auto;
+  border-left: 5px solid #e74c3c;
+  font-family: 'Roboto', sans-serif; /* Font for a professional look */
+}
+
+h1 {
+  font-size: 2rem;
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700; /* Stronger weight for emphasis */
+  letter-spacing: 1px; /* Slight letter-spacing for modern feel */
+  text-transform: uppercase; /* Uppercase for a bold title */
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px; /* Slight spacing for clarity */
+  text-transform: capitalize; /* For a clean, professional appearance */
+}
+
+/* Input Fields Styling */
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-control:focus {
+  border-color: #e74c3c;
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.3);
+  outline: none;
+}
+
+textarea.form-control {
+  height: 150px;
+  resize: vertical;
+}
+
+/* File Input Styling */
+#photos {
+  margin-top: 10px;
+}
+
+input[type="file"] {
+  display: block;
+  width: 100%;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Submit Button Styling */
+.btn-primary {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+  font-size: 1rem;
+  padding: 12px 20px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #fff;
+  transition: background-color 0.3s, transform 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.2);
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-primary:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(231, 76, 60, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .annonce-form-container {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .btn-primary {
+    padding: 14px 24px;
+  }
+}

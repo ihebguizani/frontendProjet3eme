@@ -1,0 +1,61 @@
+.register-container {
+  width: 450px; /* Largeur du conteneur */
+  margin: 50px auto; /* Centrage */
+  padding: 40px; /* Rembourrage interne */
+  border: 1px solid #c00; /* Bordure rouge */
+  border-radius: 10px; /* Coins arrondis */
+  background-color: #ffffff; /* Fond blanc */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombre */
+}
+
+h2 {
+  text-align: center;
+  color: #c00; /* Couleur du texte */
+  margin-bottom: 30px; /* Espace en bas du titre */
+  font-family: 'Arial', sans-serif; /* Police professionnelle */
+  font-size: 24px; /* Taille de police */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Espacement entre les champs */
+}
+
+label {
+  display: block; /* Bloc pour étiquettes */
+  margin-bottom: 8px; /* Espace sous les étiquettes */
+  color: #333; /* Couleur du texte */
+  font-family: 'Arial', sans-serif; /* Police professionnelle */
+  font-size: 16px; /* Taille de police */
+}
+
+input {
+  width: 100%; /* Prendre toute la largeur */
+  padding: 12px; /* Rembourrage */
+  border: 1px solid #c00; /* Bordure rouge */
+  border-radius: 5px; /* Coins arrondis */
+  box-sizing: border-box; /* Boîte à dimension */
+  font-size: 16px; /* Taille de police pour les champs */
+}
+
+.btn {
+  width: 100%; /* Largeur complète pour le bouton */
+  padding: 12px; /* Rembourrage */
+  background-color: #c00; /* Fond rouge */
+  color: white; /* Texte blanc */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur de pointeur */
+  font-size: 18px; /* Taille de police */
+  margin-top: 15px; /* Espace au-dessus du bouton */
+}
+
+.btn:hover {
+  background-color: #a00; /* Teinte plus foncée au survol */
+}
+
+.error-message {
+  color: red; /* Texte d'erreur rouge */
+  text-align: center; /* Centrer le message d'erreur */
+  margin-top: 15px; /* Espace au-dessus */
+  font-size: 14px; /* Taille de police pour le message d'erreur */
+}

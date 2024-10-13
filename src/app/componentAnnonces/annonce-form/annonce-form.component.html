@@ -1,0 +1,47 @@
+<div class="annonce-form-container">
+  <h1>{{ isEditMode ? 'Modifier l\'annonce' : 'Créer une nouvelle annonce' }}</h1>
+  <form [formGroup]="annonceForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+
+    <!-- Champ Titre -->
+    <div class="form-group">
+      <label for="titre">Titre de l'annonce</label>
+      <input id="titre" formControlName="titre" type="text" class="form-control" required />
+    </div>
+
+    <!-- Champ Description -->
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description" class="form-control" required></textarea>
+    </div>
+
+    <!-- Champ Prix -->
+    <div class="form-group">
+      <label for="prix">Prix</label>
+      <input id="prix" formControlName="prix" type="number" class="form-control" required />
+    </div>
+
+    <!-- Champ Localisation -->
+    <div class="form-group">
+      <label for="localisation">Localisation</label>
+      <input id="localisation" formControlName="localisation" type="text" class="form-control" required />
+    </div>
+
+    <!-- Champ Type -->
+    <div class="form-group">
+      <label for="type">Type d'annonce</label>
+      <select id="type" formControlName="type" class="form-control">
+        <option value="VENTE">Vente</option>
+        <option value="LOCATION">Location</option>
+      </select>
+    </div>
+
+    <!-- Importation d'images -->
+    <div class="form-group">
+      <label for="photos">Ajouter des images</label>
+      <input type="file" id="photos" (change)="onFileChange($event)" multiple />
+    </div>
+
+    <!-- Bouton de soumission -->
+    <button type="submit" class="btn btn-primary">{{ isEditMode ? 'Mettre à jour' : 'Créer' }}</button>
+  </form>
+</div>

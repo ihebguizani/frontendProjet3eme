@@ -1,0 +1,34 @@
+<div class="search-container">
+  <h2>Rechercher des annonces</h2>
+
+  <form (ngSubmit)="searchAnnonces()">
+    <label for="type">Type :</label>
+    <select [(ngModel)]="type" name="type">
+      <option value="">Tous</option>
+      <option value="VENTE">Vente</option>
+      <option value="LOCATION">Location</option>
+    </select>
+
+    <label for="localisation">Localisation :</label>
+    <input type="text" [(ngModel)]="localisation" name="localisation" placeholder="Ville">
+
+    <label for="minPrix">Prix Min :</label>
+    <input type="number" [(ngModel)]="minPrix" name="minPrix" placeholder="0">
+
+    <label for="maxPrix">Prix Max :</label>
+    <input type="number" [(ngModel)]="maxPrix" name="maxPrix" placeholder="1000000">
+
+    <button type="submit">Rechercher</button>
+  </form>
+
+  <div class="results-container">
+    <h3>Résultats :</h3>
+    <div *ngFor="let annonce of annonces" class="annonce-card">
+      <h4>{{ annonce.titre }}</h4>
+      <p>{{ annonce.description }}</p>
+      <p>Prix: {{ annonce.prix }} €</p>
+      <p>Localisation: {{ annonce.localisation }}</p>
+      <p>Type: {{ annonce.type }}</p>
+    </div>
+  </div>
+</div>

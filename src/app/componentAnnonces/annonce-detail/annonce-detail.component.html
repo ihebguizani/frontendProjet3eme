@@ -1,0 +1,17 @@
+<div class="annonce-detail-container">
+  <div class="image-container">
+    <div *ngFor="let photo of annonce.photos; let i = index">
+      <img [src]="'http://localhost:8004/api/annonces/files/' + photo"
+           alt="Photo de l'annonce"
+           style="width: 150px; cursor: pointer;"
+           (click)="openImageModal(i)">
+    </div>
+  </div>
+  <div class="annonce-info">
+    <h1>{{ annonce.titre }}</h1>
+    <p>{{ annonce.description }}</p>
+    <p class="prix">{{ annonce.prix | currency: 'EUR' }}</p>
+    <p class="localisation">{{ annonce.localisation }}</p>
+    <p>Date de publication : {{ annonce.datePublication | date }}</p>
+  </div>
+</div>

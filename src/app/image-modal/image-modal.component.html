@@ -1,0 +1,12 @@
+<div class="image-modal-container">
+  <button class="close-btn" (click)="close()">✖</button>
+
+  <!-- Bouton précédent -->
+  <button class="prev-btn" (click)="previousImage()">&#10094;</button>
+
+  <!-- Image affichée -->
+  <img [src]="'http://localhost:8004/api/annonces/files/' + data.photos[currentIndex]" class="fullscreen-image" alt="Annonce Photo">
+
+  <!-- Bouton suivant -->
+  <button class="next-btn" (click)="nextImage()">&#10095;</button>
+</div>

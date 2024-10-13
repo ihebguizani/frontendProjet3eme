@@ -1,0 +1,72 @@
+.login-container {
+  width: 450px; /* Augmenter la largeur */
+  margin: 50px auto; /* Centrer verticalement avec plus de marge */
+  padding: 40px; /* Augmenter le rembourrage */
+  border: 1px solid #c00; /* Bordure rouge */
+  border-radius: 10px;
+  background-color: #ffffff; /* Fond blanc */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+h2 {
+  text-align: center;
+  color: #c00; /* Texte rouge */
+  margin-bottom: 30px; /* Espace entre le titre et le formulaire */
+  font-family: 'Arial', sans-serif; /* Police professionnelle */
+  font-size: 24px; /* Taille de police plus grande */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Plus d'espace entre les éléments */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333; /* Texte noir */
+  font-family: 'Arial', sans-serif; /* Police professionnelle */
+  font-size: 16px; /* Taille de police professionnelle */
+}
+
+input {
+  width: 100%;
+  padding: 12px; /* Plus de rembourrage */
+  border: 1px solid #c00; /* Bordure rouge */
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px; /* Taille de police pour les champs de saisie */
+}
+
+.btn {
+  width: 100%;
+  padding: 12px; /* Plus de rembourrage */
+  background-color: #c00; /* Fond rouge */
+  color: white; /* Texte blanc */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px; /* Taille de police plus grande */
+  margin-top: 15px; /* Plus d'espace au-dessus des boutons */
+}
+
+.btn:hover {
+  background-color: #a00; /* Teinte plus foncée au survol */
+}
+
+.register-btn {
+  background-color: #fff; /* Fond blanc pour le bouton d'inscription */
+  color: #c00; /* Texte rouge */
+  border: 1px solid #c00; /* Bordure rouge */
+}
+
+.register-btn:hover {
+  background-color: #c00; /* Fond rouge au survol */
+  color: white; /* Texte blanc au survol */
+}
+
+.error-message {
+  color: red; /* Texte d'erreur rouge */
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px; /* Taille de police pour le message d'erreur */
+}

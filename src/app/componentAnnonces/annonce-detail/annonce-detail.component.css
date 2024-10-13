@@ -1,0 +1,59 @@
+.annonce-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-container {
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.annonce-info {
+  max-width: 600px;
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.prix {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #e74c3c;
+}
+
+.localisation {
+  font-size: 1.3rem;
+  color: #2980b9;
+}
+.fullscreen-dialog .mat-dialog-container {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+

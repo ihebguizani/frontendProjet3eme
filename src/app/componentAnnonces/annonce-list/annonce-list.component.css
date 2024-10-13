@@ -1,0 +1,133 @@
+.annonce-list {
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+.annonces-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.annonce-card {
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.annonce-card:hover {
+  transform: scale(1.05);
+}
+
+.annonce-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.annonce-details {
+  padding: 20px;
+  text-align: center;
+}
+
+.annonce-details h2 {
+  font-size: 1.5rem;
+  color: #34495e;
+}
+
+.details-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.details-button:hover {
+  background-color: #2980b9;
+}
+.search-bar {
+  display: flex; /* Utilisation de flex pour un alignement horizontal */
+  align-items: center; /* Centrer verticalement */
+  border: 1px solid #ccc; /* Bordure légère */
+  border-radius: 25px; /* Coins arrondis */
+  padding: 8px 15px; /* Espacement intérieur */
+  background-color: #f8f8f8; /* Couleur de fond */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour profondeur */
+  transition: box-shadow 0.3s ease; /* Transition douce pour l'ombre */
+}
+
+.search-bar:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre plus forte au survol */
+}
+
+.search-input {
+  border: none; /* Pas de bordure par défaut */
+  outline: none; /* Pas de contour au focus */
+  flex: 1; /* Prend toute la largeur disponible */
+  font-size: 16px; /* Taille de police */
+  padding: 8px; /* Espacement intérieur */
+  border-radius: 25px; /* Coins arrondis pour correspondre au conteneur */
+}
+
+.search-input::placeholder {
+  color: #aaa; /* Couleur du texte d'espace réservé */
+  font-style: italic; /* Style en italique */
+}
+
+.search-button {
+  background-color: #007bff; /* Couleur du bouton */
+  color: white; /* Couleur du texte */
+  border: none; /* Pas de bordure */
+  border-radius: 25px; /* Coins arrondis */
+  padding: 10px 15px; /* Espacement intérieur */
+  margin-left: 10px; /* Espace entre le champ et le bouton */
+  cursor: pointer; /* Curseur pointer au survol */
+  transition: background-color 0.3s ease; /* Transition douce pour la couleur */
+}
+
+.search-button:hover {
+  background-color: #0056b3; /* Couleur plus foncée au survol */
+}
+.search-container {
+  display: flex; /* Utilisation de flex pour centrer le contenu */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  margin: 20px 0; /* Ajoute un espacement vertical */
+}
+
+.search-bar {
+  width: 400px; /* Ajuste la largeur selon tes besoins */
+  height: 50px; /* Augmente la hauteur */
+  padding: 10px; /* Ajoute de l'espace à l'intérieur du champ */
+  font-size: 18px; /* Augmente la taille de la police */
+  border: 1px solid #ccc; /* Bordure légère */
+  border-radius: 25px; /* Coins arrondis */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour profondeur */
+  transition: box-shadow 0.3s ease; /* Transition douce pour l'ombre */
+}
+
+.search-bar:focus {
+  outline: none; /* Pas de contour au focus */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre plus forte au focus */
+}
+
+.search-bar::placeholder {
+  color: #aaa; /* Couleur du texte d'espace réservé */
+  font-style: italic; /* Style en italique */
+}
+
