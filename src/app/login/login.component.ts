@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {LoginService} from "../services/login.service";
 import {Router} from "@angular/router";
+import {UserService} from "../services/user.service";
 
 @Component({
   selector: 'app-login',
@@ -12,14 +13,16 @@ export class LoginComponent {
   password: string = '';
   message: string = '';
 
-  constructor(private authService: LoginService, private router: Router) {}
+  constructor(private authService: LoginService, private router: Router,
+              private userService:UserService) {}
 
   login() {
     this.authService.login(this.username, this.password).subscribe(
       response => {
         // Enregistrer le token dans le stockage local et rediriger
-        localStorage.setItem('token', response.token);
-        this.router.navigate(['/']);
+        sessionStorage.setItem('token', response.token);
+
+        this.router.navigate(['/annonces']);
       },
       error => {
         this.message = error.error.message || 'Erreur de connexion';

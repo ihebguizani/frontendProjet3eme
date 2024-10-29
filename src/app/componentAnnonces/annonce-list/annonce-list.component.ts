@@ -21,7 +21,8 @@ export class AnnonceListComponent implements OnInit {
   getAnnonces(): void {
     this.annonceService.getAnnonces().subscribe((data: any[]) => {
       this.annonces = data;
-      this.filteredAnnonces = data;  // Par défaut, toutes les annonces sont affichées
+      this.filteredAnnonces = data;
+      console.log(this.annonces)// Par défaut, toutes les annonces sont affichées
     });
   }
 

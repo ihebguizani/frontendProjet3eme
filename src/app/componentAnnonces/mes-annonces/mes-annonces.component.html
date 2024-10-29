@@ -1,0 +1,21 @@
+
+<div class="annonce-list">
+  <h1 class="title">Annonces immobilières</h1>
+  <div class="annonces-container">
+    <div *ngFor="let annonce of annonces" class="annonce-card">
+      <div *ngFor="let photo of annonce.photos">
+        <img  [src]="'http://localhost:8004/api/annonces/files/' + photo" alt="Photo de l'annonce" style="width: 150px;">
+      </div>
+      <div class="annonce-details">
+        <h2>{{ annonce.titre }}</h2>
+        <p>{{ annonce.localisation }}</p>
+        <p>{{ annonce.prix | currency: 'EUR' }}</p>
+        <a [routerLink]="['/annonces', annonce.id]" class="details-button">Voir les détails</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noAnnonces>
+  <p>Vous n'avez publié aucune annonce.</p>
+</ng-template>

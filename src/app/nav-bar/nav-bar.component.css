@@ -1,0 +1,74 @@
+.navbar {
+  background-color: #e74c3c; /* Rouge simple */
+  padding: 10px 15px; /* Espacement intérieur */
+  display: flex; /* Utilisation de flex pour l'alignement */
+  justify-content: space-between; /* Espace entre les éléments */
+  align-items: center; /* Centrer verticalement */
+  color: white; /* Couleur du texte */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Ombre légère pour profondeur */
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Largeur maximale */
+  margin: 0 auto; /* Centrer horizontalement */
+}
+
+.navbar-brand a {
+  color: white; /* Couleur du texte des liens */
+  text-decoration: none; /* Pas de soulignement */
+  font-size: 20px; /* Taille de la police */
+  margin-right: 20px; /* Espacement entre les liens */
+  font-weight: 500; /* Poids de la police */
+}
+
+.navbar-links {
+  display: flex; /* Alignement horizontal */
+  align-items: center; /* Centrer verticalement */
+  margin-left: auto; /* Aligner à droite */
+}
+
+.navbar-links a {
+  color: white; /* Couleur des liens */
+  text-decoration: none; /* Pas de soulignement */
+  margin: 0 10px; /* Espacement */
+  font-size: 16px; /* Taille de la police */
+  transition: color 0.3s ease; /* Transition pour la couleur */
+}
+
+.navbar-links a:hover {
+  color: #f1c40f; /* Couleur au survol (jaune) */
+}
+
+.username {
+  display: flex; /* Utiliser flex pour aligner l'icône et le texte */
+  align-items: center; /* Centrer verticalement */
+  margin: 0 10px; /* Espacement */
+}
+
+.username i {
+  margin-right: 5px; /* Espacement entre l'icône et le nom */
+  font-size: 18px; /* Taille de l'icône */
+}
+
+.navbar-links button {
+  background-color: transparent; /* Fond transparent */
+  color: white; /* Couleur du texte */
+  border: 1px solid white; /* Bordure blanche */
+  border-radius: 5px; /* Coins légèrement arrondis */
+  padding: 5px 10px; /* Espacement intérieur */
+  cursor: pointer; /* Curseur pointer au survol */
+  font-size: 16px; /* Taille de la police */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition pour le bouton */
+}
+
+.navbar-links button:hover {
+  background-color: white; /* Fond blanc au survol */
+  color: #e74c3c; /* Couleur rouge du texte */
+}
+
+.login-button {
+  margin-left: 15px; /* Espacement à gauche du bouton Login */
+}

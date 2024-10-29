@@ -55,5 +55,19 @@ p {
   overflow: hidden;
   background-color: transparent;
 }
+.reservation-button {
+  background-color: #28a745; /* Couleur verte */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px; /* Marge supérieure */
+}
+
+.reservation-button:hover {
+  background-color: #218838; /* Couleur plus foncée au survol */
+}
 
 

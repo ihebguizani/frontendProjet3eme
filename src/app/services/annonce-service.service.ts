@@ -21,8 +21,8 @@ export class AnnonceServiceService {
   }
 
   // Créer une nouvelle annonce avec images
-  createAnnonce(formData: FormData): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/create`, formData);
+  createAnnonce(formData: FormData): Observable<{ message: string }> {
+    return this.http.post<{ message: string }>(`${this.apiUrl}/create`, formData);
   }
 
   // Mettre à jour une annonce existante avec images
@@ -41,5 +41,8 @@ export class AnnonceServiceService {
     if (maxPrix) params = params.set('maxPrix', maxPrix.toString());
 
     return this.http.get<any[]>(`${this.apiUrl}/search`, { params });
+  }
+  getAnnoncesByUserId(userId: number): Observable<Annonce[]> {
+    return this.http.get<Annonce[]>(`${this.apiUrl}/by-user/${userId}`);
   }
 }

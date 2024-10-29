@@ -1,0 +1,11 @@
+<h2>Réserver une visite</h2>
+<form (ngSubmit)="onSubmit()">
+  <label for="date">Date de la visite</label>
+  <input type="date" id="date" [(ngModel)]="reservation.dateVisite" name="dateVisite" required>
+
+  <label for="time">Heure de la visite</label>
+  <input type="time" id="time" [(ngModel)]="reservation.timeVisite" name="timeVisite" required>
+
+  <button type="submit">Réserver</button>
+  <button type="button" (click)="onCancel()">Annuler</button>
+</form>

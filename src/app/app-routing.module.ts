@@ -6,6 +6,7 @@ import {AnnonceListComponent} from "./componentAnnonces/annonce-list/annonce-lis
 import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
 import {AnnonceSearchComponent} from "./componentAnnonces/annonce-search/annonce-search.component";
+import {MesAnnoncesComponent} from "./componentAnnonces/mes-annonces/mes-annonces.component";
 
 const routes: Routes = [
   { path: 'annonces', component: AnnonceListComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'search-annonces', component: AnnonceSearchComponent },
+  { path:'mesAnnonces',component:MesAnnoncesComponent },
 ];
 
 @NgModule({

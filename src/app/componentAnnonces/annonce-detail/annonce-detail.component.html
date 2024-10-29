@@ -8,10 +8,12 @@
     </div>
   </div>
   <div class="annonce-info">
-    <h1>{{ annonce.titre }}</h1>
+    <h1>{{ annonce?.titre }}</h1>
     <p>{{ annonce.description }}</p>
-    <p class="prix">{{ annonce.prix | currency: 'EUR' }}</p>
-    <p class="localisation">{{ annonce.localisation }}</p>
-    <p>Date de publication : {{ annonce.datePublication | date }}</p>
+    <p class="prix">{{ annonce?.prix | currency: 'EUR' }}</p>
+    <p class="localisation">{{ annonce?.localisation }}</p>
+    <p>Date de publication : {{ annonce?.datePublication | date }}</p>
+
+    <button (click)="reserveAnnonce(annonce?.annonceId)">Réserver une visite</button>
   </div>
 </div>

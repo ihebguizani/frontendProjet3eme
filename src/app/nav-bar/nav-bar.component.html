@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">
+      <a routerLink="/">Home</a>
+    </div>
+    <div class="navbar-links">
+      <a routerLink="/profile" *ngIf="checkSessionData()">Profil</a>
+      <a routerLink="/mesAnnonces" *ngIf="checkSessionData()">Mes Annonces</a>
+      <span class="username" *ngIf="checkSessionData()">
+        <i class="fas fa-user"></i> <!-- Icône d'utilisateur -->
+        {{ user?.firstname }}
+      </span>
+      <button (click)="logout()" *ngIf="checkSessionData()">Logout</button>
+      <button (click)="login()" *ngIf="!checkSessionData()" class="login-button">Login</button>
+    </div>
+  </div>
+</nav>

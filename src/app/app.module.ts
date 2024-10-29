@@ -15,6 +15,10 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { ImageModalComponent } from './image-modal/image-modal.component';
 import {MatIcon} from "@angular/material/icon";
 import { AnnonceSearchComponent } from './componentAnnonces/annonce-search/annonce-search.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { MesAnnoncesComponent } from './componentAnnonces/mes-annonces/mes-annonces.component';
+import { ReservationComponent } from './componentAnnonces/reservation/reservation.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -25,7 +29,10 @@ import { AnnonceSearchComponent } from './componentAnnonces/annonce-search/annon
     LoginComponent,
     RegisterComponent,
     ImageModalComponent,
-    AnnonceSearchComponent
+    AnnonceSearchComponent,
+    NavBarComponent,
+    MesAnnoncesComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +41,8 @@ import { AnnonceSearchComponent } from './componentAnnonces/annonce-search/annon
     HttpClientModule,
     FormsModule,
     NgOptimizedImage,
-    MatIcon
+    MatIcon,
+    MatDialogModule
   ],
   providers: [
     provideAnimationsAsync()

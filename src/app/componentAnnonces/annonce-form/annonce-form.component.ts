@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {AnnonceServiceService} from "../../services/annonce-service.service";
+import {LoginService} from "../../services/login.service";
+import {UserService} from "../../services/user.service";
 
 
 @Component({
@@ -11,6 +13,8 @@ import {AnnonceServiceService} from "../../services/annonce-service.service";
 })
 export class AnnonceFormComponent implements OnInit {
   annonceForm: FormGroup;
+  user:any;
+  userConnecte:any;
   isEditMode: boolean = false;
   annonceId: any | null = null;
   selectedFiles: File[] = []; // Pour stocker les fichiers sélectionnés
@@ -19,7 +23,9 @@ export class AnnonceFormComponent implements OnInit {
     private fb: FormBuilder,
     private annonceService: AnnonceServiceService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private auth:LoginService,
+    private userService:UserService
   ) {
     // Initialisation du formulaire
     this.annonceForm = this.fb.group({
@@ -39,6 +45,10 @@ export class AnnonceFormComponent implements OnInit {
       this.isEditMode = true;
       this.loadAnnonce(this.annonceId);
     }
+    this.userConnecte = this.auth.getAuthenticatedUser();
+    console.log(this.userConnecte);
+    console.log(this.userConnecte.sub)
+    this.getUserByUserName(this.userConnecte.sub);
   }
 
   // Gestion du changement de fichier
@@ -74,16 +84,35 @@ export class AnnonceFormComponent implements OnInit {
     this.selectedFiles.forEach(file => {
       formData.append('photos', file);
     });
+    // Récupérer l'utilisateur connecté à partir de sessionStorage (ou un autre service)
+    const user = JSON.parse(localStorage.getItem('user') || '{}');
+    console.log(this.user);
+
+    // Ajouter l'objet utilisateur au formData
+    formData.append('user', JSON.stringify(this.user));
 
     if (this.isEditMode) {
       this.annonceService.updateAnnonce(this.annonceId!, formData).subscribe(() => {
         this.router.navigate(['/annonces']);
       });
-    } else {
-      this.annonceService.createAnnonce(formData).subscribe(() => {
-        console.log(formData);
-        this.router.navigate(['/annonces']);
+    }  else {
+      this.annonceService.createAnnonce(formData).subscribe({
+        next: () => {
+          console.log("Annonce created successfully");
+          this.router.navigate(['/annonces']);
+        },
+        error: (err) => {
+          console.error('Error creating annonce:', err);
+          // Handle the error as needed
+        }
       });
     }
+  }
+  public getUserByUserName(username: string) {
+
+    let rep = this.userService.getUserByUserName(username);
+
+    rep.subscribe((data: any) => this.user = data);
+    console.log(rep);
   }
 }
